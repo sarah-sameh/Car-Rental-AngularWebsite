@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Payment Page</title>
+</head>
+<body>
+  <div class="container">
+    <div class="success-message">
+      <h2>Payment Successful</h2>
+      <p *ngIf="payment">
+        Your payment of 
+        <span class="brown-text">{{ payment.amount }}</span> 
+        using 
+        <span class="brown-text">{{ payment.method }}</span> 
+        on 
+        <span class="brown-text">{{ payment.date }}</span> 
+        was successful!
+      </p>
+      <p *ngIf="!payment" class="brown-text">Payment details not available.</p>
+    </div>
+  </div>
+</body>
+</html>

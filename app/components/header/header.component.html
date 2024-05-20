@@ -1,0 +1,61 @@
+
+
+<div class="container-fluid w-100">
+  <div class="row w-100">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+      <div class="container-fluid d-flex justify-content-between">
+        
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/logo.png" alt="My Logo" style="height: 40px; width: auto;" /> 
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible Menu -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <!-- Navbar Links -->
+          <ul class="navbar-nav nanum-myeongjo-regular fw-bold ">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" routerLink="/Home" routerLinkActive="text-danger">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/About" routerLinkActive="text-danger">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/Cars" routerLinkActive="text-danger">Cars</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/Contact" routerLinkActive="text-danger">Contact</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/Login">
+                <i class="fas fa-user"></i> Login 
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/Register">
+                <i class="fas fa-user-plus "></i> Register 
+              </a>
+            </li>
+            <li class="nav-item cursor-pointer" (click)="logoutUser()">
+              <a class="nav-link ">
+                <i class="fa-solid fa-right-from-bracket" ></i> logOut 
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+

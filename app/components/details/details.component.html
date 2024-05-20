@@ -1,0 +1,93 @@
+<div class="container mtop mbottom">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <!-- <img src="../../../assets/images/bmw.png" alt="image" class="card-img-top w-100"> for test-->
+           <img [src]="car.image" class="img-fluid rounded-start" alt="Car Image"> 
+
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h5 class="card-title">{{ car.make }} {{ car.model }}</h5>
+              <p class="card-text"><strong>Year:</strong> {{ car.year }}</p>
+              <p class="card-text"><strong>Fuel Type:</strong> {{ car.fuelType }}</p>
+              <p class="card-text"><strong>Availability : </strong>
+                <span *ngIf="car.isAvailable" class="text-success"><i class="fas fa-check-circle"></i> Available</span>
+                <span *ngIf="!car.isAvailable" class="text-danger"><i class="fas fa-times-circle"></i> Not Available</span>
+              </p>
+                  
+              <h6 class="mt-4">Maintenance History</h6>
+              <ul class="list-unstyled">
+                <li *ngIf="maintenance">
+                  <p><strong>Type:</strong> {{ maintenance.type }}</p>
+                  <p><strong>Description:</strong> {{ maintenance.description }}</p>
+                  <p><strong>Cost:</strong> {{ maintenance.cost }}</p>
+                  <p><strong>Maintenance Date:</strong> {{ maintenance.maintenanceDate }}</p>
+                </li>
+              </ul>
+              <div class="text-center">
+                <button class="btn btn-success">Rent</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  .mtop {
+    margin-top: 200px;
+  }
+
+  .mbottom {
+    margin-bottom: 150px;
+
+  }
+
+  .card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card img {
+    border-radius: 15px 15px 0 0;
+  }
+
+  .card p {
+    margin-bottom: 5px;
+  }
+
+  .card button {
+    border-radius: 10px;
+  }
+</style>
+
+
+
+<style>
+  .mtop {
+    margin-top: 100px;
+  }
+
+  .card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card img {
+    border-radius: 15px 15px 0 0;
+  }
+
+  .card p {
+    margin-bottom: 5px;
+  }
+
+  .card button {
+    border-radius: 10px;
+  }
+</style>

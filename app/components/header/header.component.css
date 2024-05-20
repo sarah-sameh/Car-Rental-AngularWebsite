@@ -1,0 +1,58 @@
+.navbar-nav .nav-link {
+    transition: color 0.3s; 
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: red; 
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+}
+
+  .nanum-myeongjo-regular {
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .navbar-custom {
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    font-weight: bold;
+    border: none;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    z-index: 10; 
+    padding: 10px 20px; 
+  }
+  
+  .container-fluid {
+    max-width: 100%; 
+    padding: 0 20px; 
+  }
+  
+  .navbar {
+    justify-content: flex-end; 
+    align-items: center;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-nav {
+    margin-right: 20px; 
+  }
+  
+  .navbar-nav .nav-item {
+    margin-right: 10px; 
+  }
+  
+  .navbar-toggler-icon {
+    color: white; 
+  }
+  
+ 

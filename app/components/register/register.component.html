@@ -1,0 +1,33 @@
+
+
+<div id="form-ui" class="d-flex justify-content-center align-items-center" style="height: 100vh; background-color: black;">
+    <form action="#" method="post" id="form">
+        <div id="form-body">
+            <div id="welcome-lines" class="text-center">
+                <p id="welcome-line-1">Create Account</p>
+            </div>
+            <div id="input-area">
+                
+                <div class="form-inp">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-inp">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-inp">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="form-inp">
+                    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                </div>
+                <p class="sign-up-label">
+                    Already have an account ? <a  [routerLink]="['/Login']" class="sign-up-link">Log in</a>
+                </p>
+            </div>
+            <div id="send" class="text-center">
+                <button id="send-button" type="submit">Create Account</button>
+            </div>
+            
+        </div>
+    </form>
+</div>

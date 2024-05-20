@@ -1,0 +1,39 @@
+<div id="form-ui" class="d-flex justify-content-center align-items-center" style="height: 100vh; background-color: black;">
+    <form  id="form" [formGroup]="loginForm" (ngSubmit)="handleform()">
+        <div id="form-body">
+            <div id="welcome-lines" class="text-center">
+                <p id="welcome-line-1">Welcome Again</p>
+            </div>
+            <div id="input-area">
+                <div class="form-inp">
+                    <input type="text" formControlName="userName" name="userName" placeholder="User Name" required >
+                </div>
+                <div class="alert alert-danger" *ngIf="loginForm.get('userName')?.errors && loginForm.get('userName')?.touched">
+                    <p *ngIf="loginForm.get('userName')?.getError('required')">Username is required</p>
+                </div>
+
+
+                <div class="form-inp">
+                    <input type="password" formControlName="password" name="password" placeholder="Password" required>
+                </div>
+
+                <div class="alert alert-danger" *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched">
+                    <p *ngIf="loginForm.get('password')?.getError('required')">Password is required</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="form-check mb-0">
+                  <input class="form-check-input me-2" type="checkbox" id="form2Example3" />
+                  <label class="form-check-label" for="form2Example3">Remember me</label>
+                </div>
+                <a  [routerLink] ="['/resetpassword']" class="forgot-password-link">Forgot password?</a>
+            </div>
+            <div id="send" class="text-center">
+                <button id="send-button">Login</button>
+            </div>
+            <div class="text-center text-lg-start mt-4 pt-2">
+                <p class=" fw-bold mt-2 pt-1 mb-0">Don't have an account ? <a [routerLink] ="['/Register']">Register</a></p>
+              </div>
+        </div>
+    </form>
+</div>

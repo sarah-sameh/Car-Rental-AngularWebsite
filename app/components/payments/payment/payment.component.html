@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <h1 class="text-center mt-5">Payment Page</h1>
+        <form (ngSubmit)="submitPaymentForm()" #paymentForm="ngForm" class="payment-form">
+          <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" [(ngModel)]="payment.date" required class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="method">Payment Method:</label>
+            <select id="method" name="method" [(ngModel)]="payment.method" required class="form-control">
+              <option value="">Select Payment Method</option>
+              <option value="credit_card">Credit Card</option>
+              <option value="paypal">PayPal</option>
+              <option value="bank_transfer">Bank Transfer</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" [(ngModel)]="payment.amount" required class="form-control">
+          </div>
+          <input type="hidden" id="userId" name="userId" [(ngModel)]="payment.userId">
+          <button type="submit" [disabled]="!paymentForm.valid" class="btn btn-primary btn-block mt"><strong>Submit Payment</strong></button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
